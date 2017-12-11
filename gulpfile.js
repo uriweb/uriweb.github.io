@@ -79,15 +79,6 @@ function watcher(done) {
     // watch for Playground JS changes
 	gulp.watch('./js/src/*.js', scripts);
 
-	// watch for Theme CSS changes
-	gulp.watch('./src/sass/*.scss', CLStyles);
-    
-    // watch for Theme Patches CSS changes
-	gulp.watch('./src/sass/patches/*.scss', CLPatchStyles);
-    
-    // watch for Theme JS changes
-	gulp.watch('./src/js/*.js', CLScripts);
-
 	done();
 }
 
