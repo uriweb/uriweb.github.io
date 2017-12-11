@@ -29,7 +29,7 @@ var autoprefixerOptions = {
 };
 
 
-// Playground CSS concat, auto-prefix and minify
+// CSS concat, auto-prefix and minify
 gulp.task('styles', styles);
 
 function styles(done) {
@@ -49,74 +49,8 @@ function styles(done) {
   //console.log('styles ran');
 }
 
-// Component Library CSS concat, auto-prefix and minify
-gulp.task('CLStyles', CLStyles);
 
-function CLStyles(done) {
-    
-    var banner = ['/*',
-  '===========================================',
-  '',
-  'COMPONENT LIBRARY',
-  '',
-  'AUTHOR: BRANDON FULLER <bjcfuller@uri.edu>',
-  '',
-  'See documentation at uriweb.bitbucket.io',
-  '',
-  '==============================================',
-  '*/',
-  '',
-  ''].join('\n')
-    
-	gulp.src('./src/sass/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass(CLSassOptions).on('error', sass.logError))
-		.pipe(autoprefixer(autoprefixerOptions))
-		.pipe(concat('cl.built.css'))
-        .pipe(header(banner))
-		.pipe(sourcemaps.write('./map'))
-		.pipe(gulp.dest('./uri-component-library/css/'));
-
-  done();
-  //console.log('styles ran');
-}
-
-
-// Component Library Theme Patches CSS concat, auto-prefix and minify
-gulp.task('CLPatchStyles', CLPatchStyles);
-
-function CLPatchStyles(done) {
-    
-    var banner = ['/*',
-  '===========================================',
-  '',
-  'COMPONENT LIBRARY THEME PATCHES',
-  '',
-  'Improves visual compatability with existing',
-  'Wordpress themes, like the Department theme.',
-  '',
-  'AUTHOR: BRANDON FULLER <bjcfuller@uri.edu>',
-  '',
-  '==============================================',
-  '*/',
-  '',
-  ''].join('\n')
-    
-	gulp.src('./src/sass/patches/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass(CLSassOptions).on('error', sass.logError))
-		.pipe(autoprefixer(autoprefixerOptions))
-		.pipe(concat('clpatch.built.css'))
-        .pipe(header(banner))
-		.pipe(sourcemaps.write('./map'))
-		.pipe(gulp.dest('./uri-component-library/css/'));
-
-  done();
-  //console.log('styles ran');
-}
-
-
-// Playground JS concat, strip debugging and minify
+// JS concat, strip debugging and minify
 gulp.task('scripts', scripts);
 
 function scripts(done) {
@@ -133,23 +67,6 @@ function scripts(done) {
  // console.log('scripts ran');
 }
 
-
-// Component Library JS concat, strip debugging and minify
-gulp.task('CLScripts', CLScripts);
-
-function CLScripts(done) {
-  gulp.src('./src/js/*.js')
-    .pipe(jshint(done))
-    .pipe(jshint.reporter('default'));
-  gulp.src('./src/js/*.js')
-    .pipe(concat('cl.built.js'))
-    //.pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest('./uri-component-library/js/'));
-    
-	done();
- // console.log('scripts ran');
-}
 
 // watch
 gulp.task('watcher', watcher);
@@ -175,7 +92,7 @@ function watcher(done) {
 }
 
 gulp.task( 'default',
-	gulp.parallel('styles', 'scripts', 'CLStyles', 'CLPatchStyles', 'CLScripts', 'watcher', function(done){
+	gulp.parallel('styles', 'scripts', 'watcher', function(done){
 		done();
 	})
 );
