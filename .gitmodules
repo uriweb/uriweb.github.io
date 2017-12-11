@@ -1,0 +1,3 @@
+[submodule "uri-component-library"]
+	path = uri-component-library
+	url = git@bitbucket.org:uriweb/uri-component-library.git
