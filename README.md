@@ -1,8 +1,6 @@
 # README #
 
-This is the University of Rhode Island’s style guide for all things digital.  View it at [http://uriweb.bitbucket.io/](http://uriweb.bitbucket.io/)
-
-The style guide website is served from this repository, where the component library is also built, tested and documented.  Because the whole thing lives in a repository, it should come as no surprise that it is a living document. 
+This is the University of Rhode Island’s style guide for all things digital. The style guide website is served from this repository. View it at [http://uriweb.bitbucket.io/](http://uriweb.bitbucket.io/)
 
 ### Humans ###
 
