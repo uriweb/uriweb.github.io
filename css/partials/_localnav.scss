@@ -10,6 +10,10 @@
         border-left: 1px solid #0047c2;
     }
     
+    &.landing {
+        font-size: 1.4rem;
+    }
+    
     li {
         display: block;
         padding: .9rem 1.5rem;
@@ -24,6 +28,13 @@
     a:hover,
     a:focus {
         color: #003287;
+    }
+    
+    span {
+        display: block;
+        padding: .5rem 0;
+        color: #555;
+        font-size: 1rem;
     }
     
 } // #localnav

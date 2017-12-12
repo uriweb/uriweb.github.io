@@ -27,6 +27,8 @@ function menuControl() {
     gn.addEventListener('click', function(e) {
         e.stopPropagation();
     });
+    
+    /*
 
     lis = document.querySelectorAll('#gn>li');
     for(i=0; i<lis.length; i++) {
@@ -41,6 +43,8 @@ function menuControl() {
             ul.style.display = 'none';
         }
     }
+    
+    */
     
 }
 

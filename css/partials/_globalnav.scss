@@ -79,7 +79,7 @@
         display: block;
     }
     
-    #gn>li>span {
+    li a.landing {
         display: block;
         padding: 25px 20px 25px 35px;
         color: #fff;
@@ -90,12 +90,12 @@
         transition: background .1s ease-in-out;
     }
 
-    #gn>li>span:hover,
-    #gn>li>span:focus {
+    li a.landing:hover,
+    li a.landing:focus {
         background: #003a7e;
     }
     
-    li a {
+    li a:not(.landing) {
         display: block;
         padding: 15px 20px 15px 40px;
         margin: 0 0 2px 10px;
@@ -105,8 +105,8 @@
         transition: background .1s ease-in-out;
     }
 
-    li a:hover,
-    li a:focus {
+    li a:not(.landing):hover,
+    li a:not(.landing):focus {
         background: #003a7e;
     }
 
@@ -191,6 +191,9 @@ body.nav-demos #gn-demos {
 #gn-writing-links .gn-icon {
     background-image: url(../media/assets/icon-links.png);
 }
+#gn-demos .gn-icon {
+    background-image: url(../media/assets/icon-demos.png);
+}
 body.nav-buttons #gn-components-buttons,
 body.nav-cards #gn-components-cards,
 body.nav-color #gn-style-color,
@@ -212,7 +215,8 @@ body.nav-card-tiles #gn-demos-card-tiles,
 body.nav-dynamic-image-hero #gn-demos-dynamic-image-hero,
 body.nav-video-hero #gn-demos-video-hero,
 body.nav-interaction #gn-demos-interaction,
-body.nav-links #gn-writing-links {
+body.nav-links #gn-writing-links
+body.nav-demos #gn-demos {
     a {
         background: #0047c2;
         color: #fff;
