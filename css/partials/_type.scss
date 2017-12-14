@@ -178,7 +178,7 @@ xmp {
     width: 100%;
     white-space: pre-wrap;
     font-family: $type-mono;
-    font-size: .75rem;
+    font-size: .8rem;
     margin: 30px 0;
 }
 
@@ -219,7 +219,8 @@ pre p.code.shortcode {
 
 code {
     &.class,
-    &.id {
+    &.id,
+    &.href {
         position: relative;
         top: -.1rem;
         padding: .1rem .3rem;
@@ -239,6 +240,10 @@ code {
         background: #ed6510;
         white-space: nowrap;
     }
+    &.href {
+        background: #5410ed;
+        white-space: nowrap;
+    }
     &.shortcode {
         position: relative;
         top: -.1rem;
@@ -249,15 +254,13 @@ code {
         color: #fff;
         white-space: nowrap;
     }
-    &.tag {
-        color: #0545ac;
-        white-space: nowrap;
-    }
+    
     &.bool,
     &.string,
     &.num,
     &.attr,
-    &.link {
+    &.link,
+    &.tag {
         font-size: 90%;
         padding: .1rem .2rem;
     }
@@ -275,6 +278,10 @@ code {
     }
     &.link {
         color: #555;
+    }
+    &.tag {
+        color: #0545ac;
+        white-space: nowrap;
     }
 } // code
 

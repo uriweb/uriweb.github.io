@@ -32,40 +32,50 @@
             
             <section id="Usage">
                 <h2>Usage</h2>
-                <p>Section body</p>
                 
-                <div class="cl-tabs">
-                    <ul role="tablist">
-                        <li role="presentation">
-                            <a role="tab" href="#cl-tab-section-1" id="cl-tab-1">Section 1</a>
-                        </li>
-                        <li role="presentation">
-                            <a role="tab" href="#cl-tab-section-2" id="cl-tab-2">Section 2</a>
-                        </li>
-                        <li role="presentation">
-                            <a role="tab" href="#cl-tab-section-3" id="cl-tab-3">Section 3</a>
-                        </li>
-                        <li role="presentation">
-                            <a role="tab" href="#cl-tab-section-4" id="cl-tab-4">Section 4</a>
-                        </li>
-                    </ul>
-                    <section role="tabpanel" id="cl-tab-section-1" aria-labelledby="cl-tab-1">
-                        <h2>Section 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. <a href="#">Nam luctus</a>, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan.</p>
-                    </section>
-                    <section role="tabpanel" id="cl-tab-section-2" aria-labelledby="cl-tab-2">
-                        <h2>Section 2</h2>
-                        <p>Nullam at diam nec arcu suscipit auctor non a erat. Sed et magna semper, eleifend magna non, facilisis nisl. Proin et est et lorem dictum finibus ut nec turpis. Aenean nisi tortor, euismod a mauris a, mattis scelerisque tortor. Sed dolor risus, varius a nibh id, condimentum lacinia est. In lacinia cursus odio a aliquam. Curabitur tortor magna, laoreet ut rhoncus at, sodales consequat tellus.</p>
-                    </section>
-                    <section role="tabpanel" id="cl-tab-section-3" aria-labelledby="cl-tab-3">
-                        <h2>Section 3</h2>
-                        <p>Phasellus ac tristique orci. Nulla maximus <a href="">justo nec dignissim consequat</a>. Sed vehicula diam sit amet mi efficitur vehicula in in nisl. Aliquam erat volutpat. Suspendisse lorem turpis, accumsan consequat consectetur gravida, <a href="#">pellentesque ac ante</a>. Aliquam in commodo ligula, sit amet mollis neque. Vestibulum at facilisis massa.</p>
-                    </section>
-                    <section role="tabpanel" id="cl-tab-section-4" aria-labelledby="cl-tab-4">
-                        <h2>Section 4</h2>
-                        <p>Nam luctus, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. </p>
-                    </section>
-                </div>
+                <p>Create a tabbed interface with the class <code class="class">cl-tabs</code></p>
+                
+                <xmp class="prettyprint">
+<div class="cl-tabs">
+    <section>
+        ...
+    </section>
+    <section>
+        ...
+    </section>
+    ...
+</div>
+                </xmp>
+                
+                <p>Each <code class="tag">&lt;section&gt;</code> will become a panel and have an accompanying tab, which is generated dynamically using JavaScript. The non-JavaScript experience will not have tabs or hidden panels, and should be indistinguishable from any other page sections.</p>
+                                
+                <article>
+                    <div class="cl-tabs">
+                        <section>
+                            <h2>Foo</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. <a href="#">Nam luctus</a>, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan.</p>
+                        </section>
+                        <section>
+                            <p>Nullam at diam nec arcu suscipit auctor non a erat. Sed et magna semper, eleifend magna non, facilisis nisl. Proin et est et lorem dictum finibus ut nec turpis. Aenean nisi tortor, euismod a mauris a, mattis scelerisque tortor. Sed dolor risus, varius a nibh id, condimentum lacinia est. In lacinia cursus odio a aliquam. Curabitur tortor magna, laoreet ut rhoncus at, sodales consequat tellus.</p>
+                        </section>
+                        <section>
+                            <h2>Bar</h2>
+                            <p>Phasellus ac tristique orci. Nulla maximus <a href="">justo nec dignissim consequat</a>. Sed vehicula diam sit amet mi efficitur vehicula in in nisl. Aliquam erat volutpat. Suspendisse lorem turpis, accumsan consequat consectetur gravida, <a href="#">pellentesque ac ante</a>. Aliquam in commodo ligula, sit amet mollis neque. Vestibulum at facilisis massa.</p>
+                        </section>
+                        <section>
+                            <h2>Section 4</h2>
+                            <p>Nam luctus, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. </p>
+                        </section>
+                    </div>
+                </article>
+                
+                <article>
+                    <h4>ID's and tab labels</h4>
+                    <p>An <code class="attr">id</code> attribute can be added for each section, but it is not required.  If supplied, JavaScript will use the section <code class="attr">id</code> for the corresponding tab's <code class="attr">href</code>.  Otherwise, it will create and use a generic sequential <code class="attr">id</code> in the format <code class="id">cl-tabs-section-#</code></p>
+                    <p>JavaScript will try to use the section's headers as the label for the corresponding tab, beginning with <code class="tag">&lt;h1&gt;</code>.  If an <code class="tag">&lt;h1&gt;</code> is absent, the first <code class="tag">&lt;h2&gt;</code> will be used.  If both are absent, a generic sequential label will be created in the format <code class="string">"Section #"</code> and used for the tab.</p>
+                    <h4>Accessibility</h4>
+                    <p>Because tabs, by design, hide information and contain related elements that are symantically detatched from one another (i.e. a tab and the content it controls are not sibling elements), <code class="attr">role</code> and <code class="attr">aria-*</code> attributes allow the component to be fully accessible.  To make it easier to code, these attributes are added automatically through JavaScript.</p>
+                </article>
                 
             </section>
             
