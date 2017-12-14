@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tabs - Components - Digital Content Style Guide</title>
+        <link rel="icon" type="image/png" href="../media/assets/favicon.png">
+        <link rel="stylesheet" type="text/css" href="../css/playground.built.css">
+        <link rel="stylesheet" type="text/css" href="../uri-component-library/css/cl.built.css">   
+        <script src="../js/playground.built.js"></script>
+        <script src="../uri-component-library/js/cl.built.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    </head>
+	
+	<body class="nav-components nav-tabs">
+        
+        <nav>
+            <div id="no-js">Please turn on JavaScript, if you can. You're missing out!</div>
+            <script>loadTemplatePart('../includes/nav.html', 'nav', menuControl);</script>
+        </nav>
+            
+        <main>
+            
+            <h1 class="page-title">Tabs</h1>
+            <p class="type-intro">A tabbed interface</p>
+            
+            <ul id="localnav">
+                <li><a href="#section-name">Usage</a></li>
+            </ul>
+            
+            <section id="Usage">
+                <h2>Usage</h2>
+                <p>Section body</p>
+                
+                <div class="cl-tabs">
+                    <ul role="tablist">
+                        <li role="presentation">
+                            <a role="tab" href="#cl-tab-section-1" id="cl-tab-1">Section 1</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="tab" href="#cl-tab-section-2" id="cl-tab-2">Section 2</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="tab" href="#cl-tab-section-3" id="cl-tab-3">Section 3</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="tab" href="#cl-tab-section-4" id="cl-tab-4">Section 4</a>
+                        </li>
+                    </ul>
+                    <section role="tabpanel" id="cl-tab-section-1" aria-labelledby="cl-tab-1">
+                        <h2>Section 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. <a href="#">Nam luctus</a>, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan.</p>
+                    </section>
+                    <section role="tabpanel" id="cl-tab-section-2" aria-labelledby="cl-tab-2">
+                        <h2>Section 2</h2>
+                        <p>Nullam at diam nec arcu suscipit auctor non a erat. Sed et magna semper, eleifend magna non, facilisis nisl. Proin et est et lorem dictum finibus ut nec turpis. Aenean nisi tortor, euismod a mauris a, mattis scelerisque tortor. Sed dolor risus, varius a nibh id, condimentum lacinia est. In lacinia cursus odio a aliquam. Curabitur tortor magna, laoreet ut rhoncus at, sodales consequat tellus.</p>
+                    </section>
+                    <section role="tabpanel" id="cl-tab-section-3" aria-labelledby="cl-tab-3">
+                        <h2>Section 3</h2>
+                        <p>Phasellus ac tristique orci. Nulla maximus <a href="">justo nec dignissim consequat</a>. Sed vehicula diam sit amet mi efficitur vehicula in in nisl. Aliquam erat volutpat. Suspendisse lorem turpis, accumsan consequat consectetur gravida, <a href="#">pellentesque ac ante</a>. Aliquam in commodo ligula, sit amet mollis neque. Vestibulum at facilisis massa.</p>
+                    </section>
+                    <section role="tabpanel" id="cl-tab-section-4" aria-labelledby="cl-tab-4">
+                        <h2>Section 4</h2>
+                        <p>Nam luctus, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. </p>
+                    </section>
+                </div>
+                
+            </section>
+            
+        </main>
+                
+        <footer id="globalfooter">
+            <script>loadTemplatePart('../includes/footer.html', 'footer');</script>
+        </footer>
+        
+    </body>
+    
+</html>
