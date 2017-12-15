@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tabs - Components - Digital Content Style Guide</title>
+        <link rel="icon" type="image/png" href="../media/assets/favicon.png">
+        <link rel="stylesheet" type="text/css" href="../css/playground.built.css">
+        <link rel="stylesheet" type="text/css" href="../uri-component-library/css/cl.built.css">   
+        <script src="../js/playground.built.js"></script>
+        <script src="../uri-component-library/js/cl.built.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    </head>
+	
+	<body class="nav-components nav-tabs">
+        
+        <nav>
+            <div id="no-js">Please turn on JavaScript, if you can. You're missing out!</div>
+            <script>loadTemplatePart('../includes/nav.html', 'nav', menuControl);</script>
+        </nav>
+            
+        <main>
+            
+            <h1 class="page-title">Tabs</h1>
+            <p class="type-intro">Tabs allow a large amount of information to be presented in compact form.  Tabs segregate content into sections and hide all but one section at a time, while allowing the user random access to each section.</p>
+            
+            <ul id="localnav">
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+            </ul>
+            
+            <section id="usage">
+                <h2>Usage</h2>
+                
+                <p>Create a tabbed interface with the class <code class="class">cl-tabs</code></p>
+                
+                <xmp class="prettyprint">
+<div class="cl-tabs">
+    <section>
+        ...
+    </section>
+    <section>
+        ...
+    </section>
+    ...
+</div>
+                </xmp>
+                
+                <p>Each <code class="tag">&lt;section&gt;</code> will become a panel and have an accompanying tab, which is generated dynamically using JavaScript. The non-JavaScript experience will not have tabs or hidden panels, and should be indistinguishable from any other page sections.</p>
+                                
+                <article>
+                    <div class="cl-tabs">
+                        <section>
+                            <h2>Foo</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. <a href="#">Nam luctus</a>, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan.</p>
+                        </section>
+                        <section>
+                            <p>Nullam at diam nec arcu suscipit auctor non a erat. Sed et magna semper, eleifend magna non, facilisis nisl. Proin et est et lorem dictum finibus ut nec turpis. Aenean nisi tortor, euismod a mauris a, mattis scelerisque tortor. Sed dolor risus, varius a nibh id, condimentum lacinia est. In lacinia cursus odio a aliquam. Curabitur tortor magna, laoreet ut rhoncus at, sodales consequat tellus.</p>
+                        </section>
+                        <section>
+                            <h2>Bar</h2>
+                            <p>Phasellus ac tristique orci. Nulla maximus <a href="">justo nec dignissim consequat</a>. Sed vehicula diam sit amet mi efficitur vehicula in in nisl. Aliquam erat volutpat. Suspendisse lorem turpis, accumsan consequat consectetur gravida, <a href="#">pellentesque ac ante</a>. Aliquam in commodo ligula, sit amet mollis neque. Vestibulum at facilisis massa.</p>
+                        </section>
+                        <section>
+                            <h2>Section 4</h2>
+                            <p>Nam luctus, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus. Praesent non odio bibendum magna bibendum accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. </p>
+                        </section>
+                    </div>
+                </article>
+                
+                <article>
+                    <h4>Section IDs and Tab Labels</h4>
+                    <p>An <code class="attr">id</code> attribute can be added for each section, but it is not required.  If supplied, JavaScript will use the section <code class="attr">id</code> for the corresponding tab's <code class="attr">href</code>.  Otherwise, it will create and use a generic sequential <code class="attr">id</code> in the format <code class="id">cl-tabs-section-#</code></p>
+                    <p>JavaScript will try to use the section's headers as the label for the corresponding tab, beginning with <code class="tag">&lt;h1&gt;</code>.  If an <code class="tag">&lt;h1&gt;</code> is absent, the first <code class="tag">&lt;h2&gt;</code> will be used.  If both are absent, a generic sequential label will be created in the format <code class="string">"Section #"</code> and used for the tab.</p>
+                </article>
+                
+                <article>
+                    <h4>Shortcode Support</h4>
+                    <p>Tabs require two shortcodes: one to create the tabs container, and one for each tab/section. The section shortcodes are self-closing and are nested inside the container shortcode, which is enclosing.</p>
+                    <p>Tabs can be implemented with the shortcode <code class='shortcode'>cl-tabs</code></p>
+                    <p class="code shortcode">[cl-tabs][/cl-tabs]</p>
+                    <div class="attributes">
+                        <h5>Attributes</h5>
+                        <p><b>class</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                    </div>
+                </article>
+                <article>
+                    <p>Add sections to the component with the shortcode <code class='shortcode'>cl-tab</code></p>
+                    <p class="code shortcode">[cl-tab title="A Great Tab" body="Tabs are great - when they're accessible!"]</p>
+                    <div class="attributes">
+                        <h5>Attributes</h5>
+                        <p><b>title</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>The text for the tab and section title<br /><i>(default value: none)</i></p>
+                        <p><b>body</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>The text for the section body<br /><i>(default value: none)</i></p>
+                        <p><b>id</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>Set custom ID for the section<br /><i>(default value: none)</i></p>
+                        <p><b>class</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                    </div>
+                </article>
+                <article>
+                    <p>Nest the <code class='shortcode'>cl-tab</code> shortcode(s) inside the <code class='shortcode'>cl-tabs</code> shortcode.</p>
+                    <p class="code shortcode"><span class="enclosing">[cl-tabs]</span>[cl-tab title="Tab 1" body="Tab 1 content"][cl-tab title="Tab 2" body="Tab 2 content"]...<span class="enclosing">[/cl-tabs]</span></p>
+                </article>
+                
+            </section>
+            
+            <section id="accessibility">
+                <h2>Accessibility</h2>
+                <p>Because tabs, by design, hide information and contain related elements that are symantically detatched from one another (i.e. a tab and the content it controls are not sibling elements), <code class="attr">role</code> and <code class="attr">aria-*</code> attributes allow the component to be fully accessible.  To make it easier to code, these attributes are added automatically through JavaScript.</p>
+                <p>The final generated html looks like this:</p>
+                <xmp class="prettyprint">
+<div class="cl-tabs cl-tabs-js">
+    <ul role="tablist">
+        <li role="presentation">
+            <a href="#cl-tab-section-1" id="cl-tabs-tab-1" role="tab" aria-selected="true">...</a>
+        </li>
+        <li role="presentation">
+            <a href="#cl-tab-section-2" id="cl-tabs-tab-2" role="tab" tabindex="-1">...</a>
+        </li>
+        <li role="presentation">
+            <a href="#cl-tab-section-3" id="cl-tabs-tab-3" role="tab" tabindex="-1">...</a>
+        </li>
+        ...
+    </ul>
+    <section id="cl-tab-section-1" role="tabpanel" tabindex="-1" aria-labelledby="cl-tabs-tab-1">
+        ...
+    </section>
+    <section id="cl-tab-section-2" role="tabpanel" tabindex="-1" aria-labelledby="cl-tabs-tab-2" hidden="">
+        ...
+    </section>
+    <section id="cl-tab-section-3" role="tabpanel" tabindex="-1" aria-labelledby="cl-tabs-tab-3" hidden="">
+        ...
+    </section>
+    ...
+</div>
+                </xmp>
+            
+            </section>
+            
+        </main>
+                
+        <footer id="globalfooter">
+            <script>loadTemplatePart('../includes/footer.html', 'footer');</script>
+        </footer>
+        
+    </body>
+    
+</html>
