@@ -216,6 +216,9 @@ p.code.shortcode {
     margin: .8rem 0;
     padding: 1rem 1.2rem 1.5rem;
 }
+p.code.shortcode span.enclosing {
+    color: #74002b;
+}
 p.code.comment {
     color: #999;
 }
