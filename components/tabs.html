@@ -24,10 +24,11 @@
         <main>
             
             <h1 class="page-title">Tabs</h1>
-            <p class="type-intro">A tabbed interface</p>
+            <p class="type-intro">Tabs allow a large amount of information to be presented in compact form.  Tabs segregate content into sections and hide all but one section at a time, while allowing the user random access to each section.</p>
             
             <ul id="localnav">
-                <li><a href="#section-name">Usage</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
             </ul>
             
             <section id="Usage">
@@ -70,11 +71,9 @@
                 </article>
                 
                 <article>
-                    <h4>ID's and tab labels</h4>
+                    <h4>Section IDs and Tab Labels</h4>
                     <p>An <code class="attr">id</code> attribute can be added for each section, but it is not required.  If supplied, JavaScript will use the section <code class="attr">id</code> for the corresponding tab's <code class="attr">href</code>.  Otherwise, it will create and use a generic sequential <code class="attr">id</code> in the format <code class="id">cl-tabs-section-#</code></p>
                     <p>JavaScript will try to use the section's headers as the label for the corresponding tab, beginning with <code class="tag">&lt;h1&gt;</code>.  If an <code class="tag">&lt;h1&gt;</code> is absent, the first <code class="tag">&lt;h2&gt;</code> will be used.  If both are absent, a generic sequential label will be created in the format <code class="string">"Section #"</code> and used for the tab.</p>
-                    <h4>Accessibility</h4>
-                    <p>Because tabs, by design, hide information and contain related elements that are symantically detatched from one another (i.e. a tab and the content it controls are not sibling elements), <code class="attr">role</code> and <code class="attr">aria-*</code> attributes allow the component to be fully accessible.  To make it easier to code, these attributes are added automatically through JavaScript.</p>
                 </article>
                 
                 <article>
@@ -108,6 +107,39 @@
                     <p class="code shortcode">[cl-tabs][cl-tab title="Tab 1" body="Tab 1 content"][cl-tab title="Tab 2" body="Tab 2 content"]...[/cl-tabs]</p>
                 </article>
                 
+            </section>
+            
+            <section id="accessibility">
+                <h2>Accessibility</h2>
+                <p>Because tabs, by design, hide information and contain related elements that are symantically detatched from one another (i.e. a tab and the content it controls are not sibling elements), <code class="attr">role</code> and <code class="attr">aria-*</code> attributes allow the component to be fully accessible.  To make it easier to code, these attributes are added automatically through JavaScript.</p>
+                <p>The final generated html looks like this:</p>
+                <xmp class="prettyprint">
+<div class="cl-tabs cl-tabs-js">
+    <ul role="tablist">
+        <li role="presentation">
+            <a href="#cl-tab-section-1" id="cl-tabs-tab-1" role="tab" aria-selected="true">...</a>
+        </li>
+        <li role="presentation">
+            <a href="#cl-tab-section-2" id="cl-tabs-tab-2" role="tab" tabindex="-1">...</a>
+        </li>
+        <li role="presentation">
+            <a href="#cl-tab-section-3" id="cl-tabs-tab-3" role="tab" tabindex="-1">...</a>
+        </li>
+        ...
+    </ul>
+    <section id="cl-tab-section-1" role="tabpanel" tabindex="-1" aria-labelledby="cl-tabs-tab-1">
+        ...
+    </section>
+    <section id="cl-tab-section-2" role="tabpanel" tabindex="-1" aria-labelledby="cl-tabs-tab-2" hidden="">
+        ...
+    </section>
+    <section id="cl-tab-section-3" role="tabpanel" tabindex="-1" aria-labelledby="cl-tabs-tab-3" hidden="">
+        ...
+    </section>
+    ...
+</div>
+                </xmp>
+            
             </section>
             
         </main>
