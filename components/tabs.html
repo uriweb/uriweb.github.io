@@ -77,6 +77,37 @@
                     <p>Because tabs, by design, hide information and contain related elements that are symantically detatched from one another (i.e. a tab and the content it controls are not sibling elements), <code class="attr">role</code> and <code class="attr">aria-*</code> attributes allow the component to be fully accessible.  To make it easier to code, these attributes are added automatically through JavaScript.</p>
                 </article>
                 
+                <article>
+                    <h4>Shortcode Support</h4>
+                    <p>Tabs require two shortcodes: one to create the tabs container, and one for each tab/section. The section shortcodes are self-closing and are nested inside the container shortcode, which is enclosing.</p>
+                    <p>Tabs can be implemented with the shortcode <code class='shortcode'>cl-tabs</code></p>
+                    <p class="code shortcode">[cl-tabs][/cl-tabs]</p>
+                    <div class="attributes">
+                        <h5>Attributes</h5>
+                        <p><b>class</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                    </div>
+                </article>
+                <article>
+                    <p>Add sections to the component with the shortcode <code class='shortcode'>cl-tab</code></p>
+                    <p class="code shortcode">[cl-tab title="A Great Tab" body="Tabs are great - when they're accessible!"]</p>
+                    <div class="attributes">
+                        <h5>Attributes</h5>
+                        <p><b>title</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>The text for the tab and section title<br /><i>(default value: none)</i></p>
+                        <p><b>body</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>The text for the section body<br /><i>(default value: none)</i></p>
+                        <p><b>id</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>Set custom ID for the section<br /><i>(default value: none)</i></p>
+                        <p><b>class</b> <i>(string) (optional)</i></p>
+                        <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                    </div>
+                </article>
+                <article>
+                    <p>Nest the <code class='shortcode'>cl-tab</code> shortcode(s) inside the <code class='shortcode'>cl-tabs</code> shortcode.</p>
+                    <p class="code shortcode">[cl-tabs][cl-tab title="Tab 1" body="Tab 1 content"][cl-tab title="Tab 2" body="Tab 2 content"]...[/cl-tabs]</p>
+                </article>
+                
             </section>
             
         </main>
