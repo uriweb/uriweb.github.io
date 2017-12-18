@@ -24,102 +24,29 @@
         <main>
             
             <h1 class="page-title">Menus</h1>
-            <img class="wireframe right" src="../media/wireframes/menus.svg" alt="Menus">
-            <p class="type-intro">Menus are a navigation framework.</p>
+            <p class="type-intro">Menus are a navigation framework that transform native WordPress menus.</p>
             
             <ul id="localnav">
-                <li><a href="#design">Design</a></li>
+                <li><a href="#usage">Usage</a></li>
             </ul>
             
-            <section id="design">
+            <section id="usage">
                 
-                <h2>Design</h2>
-                <p>Menus are implemented with the class <code class="class">cl-menu</code></p>
-                <xmp class="prettyprint">
-<ul class="cl-menu">
-    <li><a href="#">Item 1</a></li>
-    <li><a href="#">Item 2</a></li>
-    <li>
-        <span>List A</span>
-        <ul>
-            <li><a href="#">Subitem A1</a></li>
-            ...
-        </ul>
-    </li>
-    ...
-</ul> 
-                </xmp>
+                <h2>Usage</h2>
+                <p>Menus are implemented by creating a WordPress menu and then adding it with the shortcode <code class="shortcode">cl-menu</code></p>
     
-                <ul class="cl-menu">
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li>
-                        <span>List A</span>
-                        <ul>
-                            <li><a href="#">Subitem A1</a></li>
-                            <li><a href="#">Subitem A2</a></li>
-                            <li>
-                                <span>List AA</span>
-                                <ul>
-                                    <li><a href="#">Subitem AA1</a></li>
-                                    <li><a href="#">Subitem AA2</a></li>
-
-                                    <li><a href="#">Subitem AA3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Subitem A3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li>
-                        <span>List B</span>
-                        <ul>
-                            <li><a href="#">Subitem B1</a></li>
-                            <li><a href="#">Subitem B2</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <article>
-                    <p>Menus are vertical by default.  To create a horizontal menu, add the class <code class="class second">bar</code></p>
-                    <xmp class="prettyprint">
-<ul class="cl-menu bar">
-    <li><a href="#">Item 1</a></li>
-    <li><a href="#">Item 2</a></li>
-    <li>
-        <span>List A</span>
-        <ul>
-            <li><a href="#">Subitem A1</a></li>
-            ...
-        </ul>
-    </li>
-    ...
-</ul> 
-                    </xmp>
-
-                    <ul class="cl-menu bar">
-                        <li><a href="#">Item 1</a></li>
-                        <li><a href="#">Item 2</a></li>
-                        <li>
-                            <span>List A</span>
-                            <ul>
-                                <li><a href="#">Subitem A1</a></li>
-                                <li><a href="#">Subitem A2</a></li>
-                                <li><a href="#">Subitem A3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Item 3</a></li>
-                        <li><a href="#">Item 4</a></li>
-                        <li>
-                            <span>List B</span>
-                            <ul>
-                                <li><a href="#">Subitem B1</a></li>
-                                <li><a href="#">Subitem B2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </article>
+                <p class="code shortcode">[cl-menu name="awesome-menu"]</p>
+                <div class="attributes">
+                    <h5>Attributes</h5>
+                    <p><b>name</b> <i>(string) (required)</i></p>
+                    <p class='indent'>The name of the menu to use<br /><i>(default value: <code class="string">menu-1</code>)</i></p>
+                    <p><b>depth</b> <i>(num) (optional)</i></p>
+                    <p class='indent'>Set how many levels of hierarchy to include; <code class="num">0</code> means all<br /><i>(default value: <code class="num">0</code>)</i></p>
+                    <p><b>id</b> <i>(string) (optional)</i></p>
+                    <p class='indent'>Set an ID for the menu container<br /><i>(default value: none)</i></p>
+                    <p><b>class</b> <i>(string) (optional)</i></p>
+                    <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                </div>
             
             </section>
             
