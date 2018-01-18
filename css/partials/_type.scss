@@ -240,7 +240,7 @@ code {
         background: #a1ebc1;
     }
     &.class.second {
-        background: #76c7ce;
+        background: #d2f297;
     }
     &.id {
         background: #ffd5bb;
@@ -341,9 +341,10 @@ pre .prettyprint .com {
         code {
             float: left;
             width: 5rem;
+            text-align: center;
         }
         span {
-            width: calc(100% - 5rem);
+            width: calc(100% - 6rem);
             color: #000;
             float: right;
             text-align: left;
