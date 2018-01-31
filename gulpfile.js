@@ -25,8 +25,8 @@ function styles(done) {
 	gulp.src('./css/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass(sassOptions).on('error', sass.logError))
-		.pipe(postcss([ autoprefixer() ]))
 		.pipe(concat('playground.built.css'))
+        .pipe(postcss([ autoprefixer() ]))
 		.pipe(sourcemaps.write('./map'))
 		.pipe(gulp.dest('./css/'));
 
