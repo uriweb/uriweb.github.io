@@ -2,18 +2,12 @@ var gulp = require('gulp');
 
 // include plug-ins
 var jshint = require('gulp-jshint');
-var changed = require('gulp-changed');
-var imagemin = require('gulp-imagemin');
 var concat = require('gulp-concat');
 var stripDebug = require('gulp-strip-debug');
 var uglify = require('gulp-uglify');
-var autoprefix = require('gulp-autoprefixer');
-var minifyCSS = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var rename = require('gulp-rename');
-var header = require('gulp-header');
 
 // options
 var sassOptions = {
@@ -33,15 +27,12 @@ var autoprefixerOptions = {
 gulp.task('styles', styles);
 
 function styles(done) {
-    
-    var banner = ['/* Playground Styles | Author: Brandon Fuller <bjcfuller@uri.edu> */','',''].join('\n')
-    
+        
 	gulp.src('./css/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass(sassOptions).on('error', sass.logError))
 		.pipe(autoprefixer(autoprefixerOptions))
 		.pipe(concat('playground.built.css'))
-        .pipe(header(banner))
 		.pipe(sourcemaps.write('./map'))
 		.pipe(gulp.dest('./css/'));
 
