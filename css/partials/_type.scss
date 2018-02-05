@@ -76,22 +76,16 @@ h6 {
 
 a.component {
     & {
-        font-weight: 600;
-        font-size: .8rem;
-        color: #2277b3;
+        color: #006fce;
         text-decoration: none;
-        padding: 2px 7px;
-        margin: 0 .1rem;
-        border-radius: .25rem;
-        border: 1px solid #e5e5e5;
-        background: #fff;
+        margin: 0 3px;
+        border-bottom: 1px dotted #006fce;
         transition: all .2s;
     }
     &:hover,
     &:focus {
-        color: #fff;
-        background: #2277b3;
-        border: 1px solid #2277b3;
+        color: #000;
+        border-bottom: 1px dotted #000;
     } 
 }
 
