@@ -193,7 +193,7 @@ xmp li {
     padding: 3px 5px;
 }
 
-code, p.code {
+code, p.code, a.code {
     font-family: $type-mono;
     font-weight: normal;
     font-size: .8rem;
@@ -220,7 +220,7 @@ pre p.code.shortcode {
     padding-top: 0;
 }
 
-code {
+code, a.code {
     & {
         position: relative;
         top: -.05rem;
@@ -229,6 +229,7 @@ code {
         border-radius: .2rem;
         color: #000;
         background: #edeff2;
+        text-decoration: none;
     }
     &.class {
         background: #a1ebc1;
@@ -244,6 +245,19 @@ code {
     }
     &.shortcode {
         background: #ffbbd5;
+    }
+    &.version {
+        color: #fff;
+        background-color: #074dbe;
+        background-image: url('../media/assets/tag.png');
+        background-size: 12px auto;
+        background-repeat: no-repeat;
+        background-position: 4px center;
+        padding-left: 20px;
+    }
+    &.version:hover,
+    &.version:focus {
+        background-color: #055ae3;
     }
     &.bool {
         color: #0085ad;

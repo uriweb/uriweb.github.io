@@ -144,3 +144,15 @@ ul.construction-list li.section {
     margin-top: .6rem;
     font-weight: 700;
 }
+
+div.depreciated {
+    color: #555;
+}
+
+div.depreciated p {
+    padding-top: 0;
+}
+
+div.depreciated .version {
+    margin-right: .5rem;
+}
