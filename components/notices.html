@@ -67,16 +67,37 @@
                     <p class="code shortcode">[cl-notice title="Alert"]The notice content. [cl-button ...][/cl-boxout]</p>
                     <div class="attributes">
                         <h5>Attributes</h5>
-                        <p><b>title</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The title of the notice</p>
-                        <p><b>style</b> <i>(string) (optional) (values: <code class="string">'urgent'</code>)</i></p>
-                        <p class='indent'>Set the style of the notice<br /><i>(default value: none)</i></p>
-                        <p><b>class</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                        <ul>
+                            <li>
+                                <p><span class="name">title</span> (string) (optional)</p>
+                                <div>
+                                    <p>The title of the notice</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">style</span> (string) (optional) (values: <code class="string">'urgent'</code>)</p>
+                                <div>
+                                    <p>Set the style of the notice</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">class</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set custom CSS class(es)</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                        </ul>
                         <div class="depreciated">
                             <h5>Depreciated</h5>
-                            <p><b>urgent</b> <i>(bool) (optional)</i></p>
-                            <p><a href="https://github.com/uriweb/uri-component-library/releases/tag/2.0.0" class="code version">2.0.0</a>Use the <b>style</b> attribute instead</p>
+                            <ul>
+                                <li>
+                                    <p><span class="name">urgent</span> (bool) (optional)</p>
+                                    <p><a href="https://github.com/uriweb/uri-component-library/releases/tag/2.0.0" class="code version">2.0.0</a>Use the <b>style</b> attribute instead</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </article>

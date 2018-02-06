@@ -1,0 +1,41 @@
+/* ==============================
+   SHORTCODES
+   ============================== */
+
+.attributes {
+    
+    li {
+        margin: 1.5rem 0;
+    }
+    
+    p {
+        padding: 0;
+    }
+    
+    li>p,
+    .default {
+        color: #888;
+    }
+    
+    li div {
+        padding-left: 1rem;
+        margin-left: 1rem;
+        border-left: 1px solid #ddd;
+    }
+    
+    .name {
+        color: #000;
+        font-weight: 600;
+    }
+    
+    .depreciated,
+    .depreciated .name {
+        color: #555;
+    }
+
+    .depreciated .version {
+        margin-right: .5rem;
+    }
+    
+}
+
