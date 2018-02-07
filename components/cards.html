@@ -39,8 +39,9 @@
             <section id="action">
                 <h2>Action Card</h2>
                 <h4>Action cards are vertical cards that prompt user action.</h4>
-                <p>Action cards can contain an image, a title, summary text, or any combination of those, plus an optional button.</p>
+                <p>Action cards can contain an image, a title, summary text, or any combination of these, plus an optional button.</p>
                 <p>Action cards are implemented with the class <code class="class">cl-card</code></p>
+                <p>Any text must be wrapped in a <code class="tag">div</code> with the class <code class="class">cl-card-text</code></p>
 
                 <div class="cl-tiles halves">
                     <div>
@@ -162,6 +163,8 @@
                 <h2>Detail Card</h2>
                 <h4>Detail cards are light-weight cards, and have an optional thumbnail image on the right-hand side.</h4>
                 <p>Detail cards are implemented with the class <code class="class">cl-dcard</code>
+                <p>Any text must be wrapped in a <code class="tag">div</code> with the class <code class="class">cl-dcard-text</code></p>
+                
                 <div class="cl-tiles halves">
                     <div>
                         <xmp class="prettyprint">
@@ -398,10 +401,12 @@
                             <li class="section">Position</li>
                             <li>Top: 0px</li>
                         </ul>
-                        <div class="cl-dcard">
+                        <div class="cl-dcard" style="box-shadow: 0 .1rem .3rem rgba(0,0,0,.15); position: relative; top: 0;">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h3>Lorem ipsum</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -417,8 +422,10 @@
                         </ul>
                         <div class="cl-dcard" style="box-shadow: 0 .3rem 1rem rgba(0,0,0,.2); position: relative; top: -2px;">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h3>Lorem ipsum</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -434,8 +441,10 @@
                         </ul>
                         <div class="cl-dcard" style="box-shadow: 0 .3rem 1rem rgba(0,0,0,.35); position: relative; top: -2px;">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h3>Lorem ipsum</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

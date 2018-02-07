@@ -121,6 +121,10 @@ p.indent {
     margin-left: 1rem;
 }
 
+*[class^="cl-"] p:first-of-type {
+    padding-top: 0;
+}
+
 main>p,
 section>p,
 section>article>p {
