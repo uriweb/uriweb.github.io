@@ -2,10 +2,11 @@
    TYPE
    ============================== */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Hind:400,600|Roboto+Mono) all;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Hind:400,600|Roboto+Mono|Rubik:400,500,700) all;
 
 $type-header: 'Roboto', 'Hind', Arial, sans-serif;
 $type-body: 'Hind', Arial, sans-serif;
+$type-numeric: 'Rubik', 'Hind', Arial, sans-serif;
 $type-serif: 'Charter', Georgia, serif;
 $type-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
@@ -74,6 +75,24 @@ h6 {
     margin: 2.5rem 0 .8rem;
 }
 
+.type-serif {
+    font-family: $type-serif;
+}
+.type-numeric {
+    font-family: $type-numeric;
+}
+.type-intro {
+    font-family: $type-serif;
+    font-size: 1.2rem;
+}
+.type-intro:last-of-type {
+     padding-bottom: 2rem;
+}
+.indent {
+    padding-top: .5rem;
+    margin-left: 1rem;
+}
+
 a.component {
     & {
         color: #006fce;
@@ -108,17 +127,6 @@ section {
 p {
     line-height: 1.7;
     padding-top: 1rem;
-}
-p.type-intro {
-    font-family: $type-serif;
-    font-size: 1.2rem;
-}
-p.type-intro:last-of-type {
-     padding-bottom: 2rem;
-}
-p.indent {
-    padding-top: .5rem;
-    margin-left: 1rem;
 }
 
 *[class^="cl-"] p:first-of-type {
