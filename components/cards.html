@@ -38,38 +38,48 @@
             
             <section id="action">
                 <h2>Action Card</h2>
-                <h4>Action cards are vertical cards that prompt user action with an optional image, summary language, and a button.</h4>
+                <h4>Action cards are vertical cards that prompt user action.</h4>
+                <p>Action cards can contain an image, a title, summary text, or any combination of these, plus an optional button.</p>
                 <p>Action cards are implemented with the class <code class="class">cl-card</code></p>
+                <p>Any text must be wrapped in a <code class="tag">div</code> with the class <code class="class">cl-card-text</code></p>
 
                 <div class="cl-tiles halves">
                     <div>
                         <xmp class="prettyprint">
 <a class="cl-card" href="">
-    <h1>Title</h1>
-    <p>Paragraph text.</p> 
-    <span class="cl-button">Button</span>
+    <div class="cl-card-text">
+        <h3>Title</h3>
+        <p>Paragraph text.</p> 
+    </div>
+    <div class="cl-button">Button</div>
 </a>    
                             </xmp>
                         <a class="cl-card" href="#">
-                            <h1>Simple</h1>
-                            <p>This is the most basic action card.</p>
-                            <span class="cl-button">Learn more</span>
+                            <div class="cl-card-text">
+                                <h3>Simple</h3>
+                                <p>This a basic action card.</p>
+                            </div>
+                            <div class="cl-button">Learn more</div>
                         </a>
                     </div>
                     <div>
                         <xmp class="prettyprint">
 <a class="cl-card" href="">
     <img>
-    <h1>Title</h1>
-    <p>Paragraph text.</p>
-    <span class="cl-button">Button</span>
+    <div class="cl-card-text">
+        <h3>Title</h3>
+        <p>Paragraph text.</p>
+    </div>
+    <div class="cl-button">Button</div>
 </a>                       
                         </xmp>
                         <a class="cl-card" href="#">
                             <img src="../media/native/hero_1.jpg" alt="Card Hero 1">
-                            <h1>The Real Deal</h1>
-                            <p>This is a more elaborate card, with a banner image and longer text.  Text should not be too long though&mdash;two or three sentences should be enough to entice user action.</p>
-                            <span class="cl-button">Explore</span>
+                            <div class="cl-card-text">
+                                <h3>The Real Deal</h3>
+                                <p>This is a more elaborate card, with a banner image and longer text.  Text should not be too long though&mdash;two or three sentences should be enough to entice user action.</p>
+                            </div>
+                            <div class="cl-button">Explore</div>
                         </a>
                     </div>
                 </div>
@@ -80,22 +90,63 @@
                 
                 <div class="attributes">
                     <h5>Attributes</h5>
-                    <p><b>link</b> <i>(string) (required)</i></p>
-                    <p class='indent'>The URL for the card</p>
-                    <p><b>img</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>The source URL for an image<br /><i>(default value: none)</i></p>
-                    <p><b>alt</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>Set alternate text for the image<br /><i>(default value: none)</i></p>
-                    <p><b>title</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>The text for a title<br /><i>(default value: none)</i></p>
-                    <p><b>body</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>The body text<br /><i>(default value: none)</i></p>
-                    <p><b>button</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>The text for the button<br /><i>(default value: <code class="string">'Explore'</code>)</i></p>
-                    <p><b>tooltip</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>The title attribute for the link<br /><i>(default value: <code class="string">'Explore'</code>)</i></p>
-                    <p><b>class</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                    <ul>
+                        <li>
+                            <p><span class="name">link</span> (string) (required)</p>
+                            <div>
+                                <p>The URL for the card</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p><span class="name">img</span> (string) (optional)</p>
+                            <div>
+                                <p>The source URL for an image</p>
+                                <p class="default">(default value: none)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p><span class="name">alt</span> (string) (optional)</p>
+                            <div>
+                                <p>Set alternate text for the image</p>
+                                <p class="default">(default value: none)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p><span class="name">title</span> (string) (optional)</p>
+                            <div>
+                                <p>The text for a title</p>
+                                <p class="default">(default value: none)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p><span class="name">body</span> (string) (optional)</p>
+                            <div>
+                                <p>The body text</p>
+                                <p class="defaut">(default value: none)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p><span class="name">button</span> (string) (optional)</p>
+                            <div>
+                                <p>Set text to add a button</p>
+                                <p class="default">(default value: none)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p><span class="name">tooltip</span> (string) (optional)</p>
+                            <div>
+                                <p>The title attribute for the link</p>
+                                <p class="default">(default value: <code class="string">'Explore'</code>)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p><span class="name">class</span> (string) (optional)</p>
+                            <div>
+                                <p>Set custom CSS class(es)</p>
+                                <p class="default">(default value: none)</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 
                 <article class="wysiwyg">
@@ -112,31 +163,41 @@
                 <h2>Detail Card</h2>
                 <h4>Detail cards are light-weight cards, and have an optional thumbnail image on the right-hand side.</h4>
                 <p>Detail cards are implemented with the class <code class="class">cl-dcard</code>
+                <p>Any text must be wrapped in a <code class="tag">div</code> with the class <code class="class">cl-dcard-text</code></p>
+                
                 <div class="cl-tiles halves">
                     <div>
                         <xmp class="prettyprint">
 <a class="cl-dcard" href="">
-    <h1>Title</h1>
-    <p>Brief phrase.</p>
+    <div class="cl-dcard-text">
+        <h3>Title</h3>
+        <p>Brief phrase.</p>
+    </div>
 </a>                  
                         </xmp>
                         <a class="cl-dcard" href="#">
-                            <h1>Lorem ipsum</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </a>
                     </div>
                     <div>
                         <xmp class="prettyprint">
 <a class="cl-dcard" href="">
     <img>
-    <h1>Title</h1>
-    <p>Brief phrase.</p>
+    <div class="cl-dcard-text">
+        <h3>Title</h3>
+        <p>Brief phrase.</p>
+    </div>
 </a>   
                         </xmp>
                         <a class="cl-dcard" href="#">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h1>Lorem ipsum</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -146,20 +207,56 @@
                     <p class="code shortcode">[cl-dcard link="sample.html" title="A Great Title" body="The body text"]</p>
                     <div class="attributes">
                         <h5>Attributes</h5>
-                        <p><b>link</b> <i>(string) (required)</i></p>
-                        <p class='indent'>The URL for the card</p>
-                        <p><b>title</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The text for a title<br /><i>(default value: none)</i></p>
-                        <p><b>body</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The body text<br /><i>(default value: none)</i></p>
-                        <p><b>img</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The source URL for an image<br /><i>(default value: none)</i></p>
-                        <p><b>alt</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set alternate text for the image<br /><i>(default value: none)</i></p>
-                        <p><b>tooltip</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The tooltip for the card<br /><i>(default value: <code class="string">'Explore'</code>)</i></p>
-                        <p><b>class</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                        <ul>
+                            <li>
+                                <p><span class="name">link</span> (string) (required)</p>
+                                <div>
+                                    <p>The URL for the card</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">title</span> (string) (optional)</p>
+                                <div>
+                                    <p>The text for a title</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>    
+                                <p><span class="name">body</span> (string) (optional)</p>
+                                <div>
+                                    <p>The body text</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">img</span> (string) (optional)</p>
+                                <div>
+                                    <p>The source URL for an image</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">alt</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set alternate text for the image</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">tooltip</span> (string) (optional)</p>
+                                <div>
+                                    <p>The tooltip for the card</p>
+                                    <p class="default">(default value: <code class="string">'Explore'</code>)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">class</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set custom CSS class(es)</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
             </section><!-- End Detail Card -->
             
@@ -198,21 +295,27 @@
                     <div class="cl-tiles thirds">
                         <a class="cl-card" href="#">
                             <img src="../media/native/uritoday_1.jpg" alt="URI Today 1">
-                            <h1>A Great Story</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac hendrerit diam. Cras facilisis sem non magna placerat tincidunt. Ut id dolor aliquet, consectetur libero vitae, placerat mauris. Proin placerat tortor id est dignissim, a pulvinar metus blandit.</p>
-                            <span class="cl-button">Read Story</span>
+                            <div class="cl-card-text">
+                                <h3>A Great Story</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac hendrerit diam. Cras facilisis sem non magna placerat tincidunt. Ut id dolor aliquet, consectetur libero vitae, placerat mauris. Proin placerat tortor id est dignissim, a pulvinar metus blandit.</p>
+                            </div>
+                            <div class="cl-button">Read Story</div>
                         </a>
                         <a class="cl-card" href="#">
                             <img src="../media/native/uritoday_2.jpg" alt="URI Today 2">
-                            <h1>Wait, There's More</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac hendrerit diam. Cras facilisis sem non magna placerat tincidunt. </p>
-                            <span class="cl-button">Read Story</span>
+                            <div class="cl-card-text">
+                                <h3>Wait, There's More</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac hendrerit diam. Cras facilisis sem non magna placerat tincidunt. </p>
+                            </div>
+                            <div class="cl-button">Read Story</div>
                         </a>
                         <a class="cl-card" href="#">
                             <img src="../media/native/uritoday_3.jpg" alt="URI Today 3">
-                            <h1>Third Time's A Charm</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac hendrerit diam. Cras facilisis sem non magna placerat tincidunt. Ut id dolor aliquet, consectetur libero vitae, placerat mauris.</p>
-                            <span class="cl-button">Read Story</span>
+                            <div class="cl-card-text">
+                                <h3>Third Time's A Charm</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac hendrerit diam. Cras facilisis sem non magna placerat tincidunt. Ut id dolor aliquet, consectetur libero vitae, placerat mauris.</p>
+                            </div>
+                            <div class="cl-button">Read Story</div>
                         </a>
                     </div>
                     <xmp class="prettyprint">
@@ -231,22 +334,28 @@
                             <p>The card below is living in a tile, along with the header and this text.</p>
                             <a class="cl-dcard" href="#">
                                 <img src="../media/commons/profile_3.jpg" alt="Profile 3">
-                                <h1>Lorem ipsum</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <p>401.555.0785</p>
+                                <div class="cl-dcard-text">
+                                    <h3>Lorem ipsum</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>401.555.0785</p>
+                                </div>
                             </a>
                         </div>
                         <a class="cl-dcard" href="#">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h1>Lorem ipsum</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p>401.555.7962</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>401.555.7962</p>
+                            </div>
                         </a>
                         <a class="cl-dcard" href="#">
                             <img src="../media/commons/profile_2.jpg" alt="Profile 2">
-                            <h1>Lorem ipsum</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p>401.555.3792</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>401.555.3792</p>
+                            </div>
                         </a>
                     </div>
                 
@@ -292,10 +401,12 @@
                             <li class="section">Position</li>
                             <li>Top: 0px</li>
                         </ul>
-                        <div class="cl-dcard">
+                        <div class="cl-dcard" style="box-shadow: 0 .1rem .3rem rgba(0,0,0,.15); position: relative; top: 0;">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h1>Lorem ipsum</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -311,8 +422,10 @@
                         </ul>
                         <div class="cl-dcard" style="box-shadow: 0 .3rem 1rem rgba(0,0,0,.2); position: relative; top: -2px;">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h1>Lorem ipsum</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -328,52 +441,13 @@
                         </ul>
                         <div class="cl-dcard" style="box-shadow: 0 .3rem 1rem rgba(0,0,0,.35); position: relative; top: -2px;">
                             <img src="../media/commons/profile_1.jpg" alt="Profile 1">
-                            <h1>Lorem ipsum</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="cl-dcard-text">
+                                <h3>Lorem ipsum</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <article>
-                    <div class="cl-tiles halves">
-                        <div>
-                            <h3>Action Card</h3>
-                            <h4>Dimensions</h4>
-                            <ul class="construction-list">
-                                <li class="section">Container</li>
-                                <li>Border radius: 0.2rem</li>
-                                <li class="section">Title</li>
-                                <li>Top padding: 1.3rem</li>
-                                <li>Side padding: 1.2rem</li>
-                                <li>Line height: 1.6rem</li>
-                                <li class="section">Paragraphs</li>
-                                <li>First top padding: 1.2rem</li>
-                                <li>Subsequent top padding: 1rem</li>
-                                <li>Side padding: 1.2rem</li>
-                                <li class="section">Button</li>
-                                <li>Top margin: 2rem</li>
-                                <li>Top border: 1px</li>
-                                <li>Top padding: 1.5% card width + 1rem</li>
-                                <li>Bottom padding: 1.5% card width + 1rem</li>
-                            </ul>
-                            <h4>Typography</h4>
-                            <ul class="construction-list">
-                                <li class="section">Title</li>
-                                <li>Font size: 1.3rem</li>
-                                <li>Line height: 1.6rem</li>
-                                <li class="section">Paragraph</li>
-                                <li>Font size: 0.8rem</li>
-                                <li>Line height: 1.5rem</li>
-                                <li class="section">Button</li>
-                                <li>Font size: 0.7rem</li>
-                                <li>Tracking: 0.1rem</li>
-                            </ul>
-                        </div>
-                         <div>
-                            <img src="../media/constructions/card-construction.jpg" class="figure" style="max-width: 477px;" alt="Action card construction">
-                        </div>
-                    </div>
-                </article>
             
             </section><!-- end construction -->
             

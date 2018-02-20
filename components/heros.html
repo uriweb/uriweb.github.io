@@ -122,13 +122,15 @@
                 </article>
                 
                 <article>
-                    <h4>Image heros can be dynamic.</h4>
-                    <p>To add movement to the hero image on page load, add the class <code class="class">dynamic</code> to the image.</p>
-                    <p>When the page is loaded, the image will shift position.</p>
+                    <h4>Image heros can be animated.</h4>
+                    <p>Heros are designed so that the image is initially centered and always covers the entire hero element. Because of this, the direction and distance of any motion applied is dependent on the dimensions of the image and the hero.</p>
+                    <p>To add movement to the hero image on page load, first add the class <code class="class">animate</code> to the image.  Then choose an animation method.</p>
+                    <h4>The "shift" method</h4>
+                    <p>To use the shift animation, add the class <code class="class second">shift</code>. When the page is loaded, the image will shift position slightly.</p>
                     <xmp class="prettyprint">
 <div class="cl-hero">
     ...
-     <div class="dynamic" style="background-image:url(hero.jpg)"></div>
+     <div class="animate shift" style="background-image:url(hero.jpg)"></div>
 </div>
                     </xmp>
                     <div class="cl-hero">
@@ -137,13 +139,11 @@
                             <p>Think big at the University of Rhode Island</p>
                             <a class="cl-button" href="#">Explore</a>
                         </div>
-                        <div class="dynamic" style="background-image:url(../media/commons/hero_vid_poster_2.jpg)"></div>
+                        <div class="animate shift" style="background-image:url(../media/commons/hero_vid_poster_2.jpg)"></div>
                     </div>
                 </article>
                 
                 <article>
-                    <h4>Direction of motion</h4>
-                    <p>Heros are designed so that the image is initially centered and always covers the entire hero element. Because of this, the direction and distance of motion is dependent on the dimensions of the image and the hero.</p>
                     <p>If the image is wider than the hero, the image will shift left until the right edge of the image is aligned with the right edge of the hero.  If the image is taller than the hero, the image will shift down until the top edge of the image is aligned with the top edge of the hero. The animation lasts for 10 seconds.</p>
                     <img class="figure" src="../media/figures/dynamic-hero-images.png" alt="Dynamic hero image movement">
                 </article>
@@ -215,42 +215,100 @@
                     
                     <div class="attributes">
                         <h5>Attributes</h5>
-
-                        <p><b>img</b> <i>(string) (required)</i></p>
-                        <p class='indent'>The source URL for the hero image or, if <b>vid</b> is set, the poster image.</p>
-
-                        <p><b>vid</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set the YouTube video ID to create a video hero; <b>id</b> must also be set.<br /><i>(default value: none)</i></p>
-
-                        <p><b>id</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set a unique id for the element; required if <b>vid</b> is set.</p>
-                        
-                        <p><b>super</b> <i>(bool) (optional)</i></p>
-                        <p class='indent'>Set to make the hero conform to the size of the browser window.<br /><i>(default value: <code class="bool">false</code>)</i></p>
-                        
-                        <p><b>fullwidth</b> <i>(bool) (optional)</i></p>
-                        <p class='indent'>Set to make the hero span the full width of the browser window; this will be overridden if <b>super</b> is set.<br /><i>(default value: <code class="bool">false</code>)</i></p>
-                        
-                        <p><b>dynamic</b> <i>(bool) (optional)</i></p>
-                        <p class='indent'>Set to make an image hero dynamic; this will be ignored if <b>vid</b> is set.<br /><i>(default value: <code class="bool">false</code>)</i></p>
-                        
-                        <p><b>headline</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The text for a headline<br /><i>(default value: none)</i></p>
-
-                        <p><b>subhead</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The text for a subhead<br /><i>(default value: none)</i></p>
-
-                        <p><b>link</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set a URL to create a button.<br /><i>(default value: none)</i></p>
-
-                        <p><b>button</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>The text for the button<br /><i>(default value: <code class="string">'Explore'</code>)</i></p>
-
-                        <p><b>tooltip</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set a tooltip for the button<br /><i>(default value: none)</i></p>
-                        
-                        <p><b>class</b> <i>(string) (optional)</i></p>
-                        <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                        <ul>
+                            <li>
+                                <p><span class="name">img</span> (string) (required)</p>
+                                <div>
+                                    <p>The source URL for the hero image or, if <span class="name">vid</span> is set, the poster image.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">vid</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set the YouTube video ID to create a video hero; <span class="name">id</span> must also be set.</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">id</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set a unique id for the element; required if <span class="name">vid</span> is set.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">format</span> (string) (optional) (values: <code class="str">super</code>, <code class="str">fullwidth</code>)</p>
+                                <div>
+                                    <p>Specify the hero format</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">animation</span> (str) (optional) (values: <code class="str">slide</code>)</p>
+                                <div>
+                                    <p>Set to animate an image hero; this will be ignored if <span class="name">vid</span> is set.</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">headline</span> (string) (optional)</p>
+                                <div>
+                                    <p>The text for a headline</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">subhead</span> (string) (optional)</p>
+                                <div>
+                                    <p>The text for a subhead</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">link</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set a URL to create a button.</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">button</span> (string) (optional)</p>
+                                <div>
+                                    <p>The text for the button</p>
+                                    <p class="default">(default value: <code class="string">'Explore'</code>)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">tooltip</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set a tooltip for the button</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">class</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set custom CSS class(es)</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="depreciated">
+                            <h5>Depreciated</h5>
+                            <ul>
+                                <li>
+                                    <p><span class="name">super</span> (bool) (optional)</p>
+                                    <p><a href="https://github.com/uriweb/uri-component-library/releases/tag/2.0.0" class="code version">2.0.0</a>Use the <b>format</b> attribute instead</p>
+                                </li>
+                                <li>
+                                    <p><span class="name">fullwidth</span> (bool) (optional)</p>
+                                    <p><a href="https://github.com/uriweb/uri-component-library/releases/tag/2.0.0" class="code version">2.0.0</a>Use the <b>format</b> attribute instead</p>
+                                </li>
+                                <li>
+                                    <p><span class="name">dynamic</span> (bool) (optional)</p>
+                                    <p><a href="https://github.com/uriweb/uri-component-library/releases/tag/2.0.0" class="code version">2.0.0</a>Use the <b>animation</b> attribute instead</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
                 

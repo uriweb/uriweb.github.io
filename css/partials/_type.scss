@@ -2,11 +2,12 @@
    TYPE
    ============================== */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Hind:400,600|Roboto+Mono) all;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Hind:400,600|Roboto+Mono|Rubik:400,500,700) all;
 
 $type-header: 'Roboto', 'Hind', Arial, sans-serif;
 $type-body: 'Hind', Arial, sans-serif;
-$type-serif: 'Charter', serif;
+$type-numeric: 'Rubik', 'Hind', Arial, sans-serif;
+$type-serif: 'Charter', Georgia, serif;
 $type-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 html {
@@ -74,24 +75,36 @@ h6 {
     margin: 2.5rem 0 .8rem;
 }
 
+.type-serif {
+    font-family: $type-serif;
+}
+.type-numeric {
+    font-family: $type-numeric;
+}
+.type-intro {
+    font-family: $type-serif;
+    font-size: 1.2rem;
+}
+.type-intro:last-of-type {
+     padding-bottom: 2rem;
+}
+.indent {
+    padding-top: .5rem;
+    margin-left: 1rem;
+}
+
 a.component {
     & {
-        font-weight: 600;
-        font-size: .8rem;
-        color: #2277b3;
+        color: #006fce;
         text-decoration: none;
-        padding: 2px 7px;
-        margin: 0 .1rem;
-        border-radius: .25rem;
-        border: 1px solid #e5e5e5;
-        background: #fff;
+        margin: 0 3px;
+        border-bottom: 1px dotted #006fce;
         transition: all .2s;
     }
     &:hover,
     &:focus {
-        color: #fff;
-        background: #2277b3;
-        border: 1px solid #2277b3;
+        color: #000;
+        border-bottom: 1px dotted #000;
     } 
 }
 
@@ -101,11 +114,6 @@ b {
 
 i {
     font-style: italic;
-}
-
-.attributes i {
-    color: rgba(0,0,0,.5);
-    font-style: normal;
 }
 
 em {
@@ -120,16 +128,9 @@ p {
     line-height: 1.7;
     padding-top: 1rem;
 }
-p.type-intro {
-    font-family: $type-serif;
-    font-size: 1.2rem;
-}
-p.type-intro:last-of-type {
-     padding-bottom: 2rem;
-}
-p.indent {
-    padding-top: .5rem;
-    margin-left: 1rem;
+
+*[class^="cl-"] p:first-of-type {
+    padding-top: 0;
 }
 
 main>p,
@@ -199,7 +200,7 @@ xmp li {
     padding: 3px 5px;
 }
 
-code, p.code {
+code, p.code, a.code {
     font-family: $type-mono;
     font-weight: normal;
     font-size: .8rem;
@@ -226,7 +227,7 @@ pre p.code.shortcode {
     padding-top: 0;
 }
 
-code {
+code, a.code {
     & {
         position: relative;
         top: -.05rem;
@@ -235,6 +236,7 @@ code {
         border-radius: .2rem;
         color: #000;
         background: #edeff2;
+        text-decoration: none;
     }
     &.class {
         background: #a1ebc1;
@@ -250,6 +252,19 @@ code {
     }
     &.shortcode {
         background: #ffbbd5;
+    }
+    &.version {
+        color: #fff;
+        background-color: #074dbe;
+        background-image: url('../media/assets/tag.png');
+        background-size: 12px auto;
+        background-repeat: no-repeat;
+        background-position: 4px center;
+        padding-left: 20px;
+    }
+    &.version:hover,
+    &.version:focus {
+        background-color: #055ae3;
     }
     &.bool {
         color: #0085ad;

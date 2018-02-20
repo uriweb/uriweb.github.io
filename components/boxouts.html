@@ -56,20 +56,73 @@
                     <a class="cl-button" href="#">Another Button</a>
                 </div>
                 
-                <h4>Shortcode Support</h4>
-                <p>Boxouts can be implemented with the shortcode <code class='shortcode'>cl-boxout</code></p>
-                <p class="code shortcode">[cl-boxout title="A Great Title"]The body text, html, or other shortcodes[/cl-boxout]</p>
-                <p>The boxout shortcode supports nested shortcodes, which makes adding <a href="../components/buttons.html" class="component">buttons</a> easy.</p>
-                <p class="code shortcode">[cl-boxout title="A Great Title"]The body text. [cl-button ...][/cl-boxout]</p>
-                <div class="attributes">
-                    <h5>Attributes</h5>
-                    <p><b>title</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>The text for a title<br /><i>(default value: none)</i></p>
-                    <p><b>float</b> <i>(string) (optional) (values: <code class="string">'left'</code>, <code class="string">'right'</code>)</i></p>
-                    <p class='indent'>Set to float the boxout either left or right<br /><i>(default value: none)</i></p>
-                    <p><b>class</b> <i>(string) (optional)</i></p>
-                    <p class='indent'>Set custom CSS class(es)<br /><i>(default value: none)</i></p>
+                <article>
+                    
+                    <h4>Boxouts can be floated</h4>
+                    <p>To float the boxout, add the class <code class="class">left</code> or <code class="class">right</code>.  Floated boxouts have a maximum width that is equal to that of <a href="cards.html" class="component">action cards</a>.</p>
+                    <xmp class="prettyprint">
+<div class="cl-boxout left">
+    ...
+</div>    
+                </xmp>
+                
+                <div class="cl-boxout left">
+                    <h1>Left</h1>
+                    <p>This is a left floated boxout.</p>
+                    <a class="cl-button" href="#">Click me</a>
                 </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at maximus justo. Aliquam vulputate arcu non cursus semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer rhoncus scelerisque eros ac varius. Quisque purus purus, faucibus at turpis in, auctor tristique ex. Aliquam at odio non felis accumsan porttitor. Morbi purus ante, blandit et lorem vitae, vulputate dictum velit. Aliquam erat volutpat. Proin maximus, nibh eu placerat elementum, augue elit elementum dolor, et porta leo sapien at ipsum. Duis tristique dolor eu tortor varius, vitae feugiat lacus tincidunt.</p>
+                    
+                <xmp class="prettyprint">
+<div class="cl-boxout right">
+    ...
+</div>    
+                </xmp>
+                
+                <div class="cl-boxout right">
+                    <h1>Right</h1>
+                    <p>This is a right floated boxout.</p>
+                    <a class="cl-button" href="#">Click me</a>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at maximus justo. Aliquam vulputate arcu non cursus semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer rhoncus scelerisque eros ac varius. Quisque purus purus, faucibus at turpis in, auctor tristique ex. Aliquam at odio non felis accumsan porttitor. Morbi purus ante, blandit et lorem vitae, vulputate dictum velit. Aliquam erat volutpat. Proin maximus, nibh eu placerat elementum, augue elit elementum dolor, et porta leo sapien at ipsum. Duis tristique dolor eu tortor varius, vitae feugiat lacus tincidunt.</p>
+                
+                </article>
+                
+                <article>
+                
+                    <h4>Shortcode Support</h4>
+                    <p>Boxouts can be implemented with the shortcode <code class='shortcode'>cl-boxout</code></p>
+                    <p class="code shortcode">[cl-boxout title="A Great Title"]The body text, html, or other shortcodes[/cl-boxout]</p>
+                    <p>The boxout shortcode supports nested shortcodes, which makes adding <a href="../components/buttons.html" class="component">buttons</a> easy.</p>
+                    <p class="code shortcode">[cl-boxout title="A Great Title"]The body text. [cl-button ...][/cl-boxout]</p>
+                    <div class="attributes">
+                        <h5>Attributes</h5>
+                        <ul>
+                            <li>
+                                <p><span class="name">title</span> (string) (optional)</p>
+                                <div>
+                                    <p>The text for a title</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">float</span> (string) (optional) (values: <code class="string">'left'</code>, <code class="string">'right'</code>)</p>
+                                <div>
+                                    <p>Set to float the boxout either left or right</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">class</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set custom CSS class(es)</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                
+                </article>
                 
                 <article class="wysiwyg">
                     <h4>WYSIWYG Editor Support</h4>

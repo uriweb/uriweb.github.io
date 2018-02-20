@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Metrics - Components - Digital Content Style Guide</title>
+        <link rel="mask-icon" href="../media/assets/safari-pinned-tab.svg" color="#333333">
+        <link rel="icon" type="image/png" href="../media/assets/favicon.png">
+        <link rel="apple-touch-icon" href="../media/assets/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../media/assets/apple-touch-icon-180x180.png">        <link rel="stylesheet" type="text/css" href="../css/playground.built.css">
+        <link rel="stylesheet" type="text/css" href="../uri-component-library/css/cl.built.css">   
+        <script src="../js/playground.built.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        
+        <style>
+            
+            .client-metric-dark-clear {
+                background: url(../media/native/hero_2.jpg);
+                background-size: 600px auto;
+                background-position: left top;
+                min-height: 300px;"
+            }
+        
+        
+        </style>
+    </head>
+	
+	<body class="nav-components nav-metrics">
+        
+        <nav>
+            <div id="no-js">Please turn on JavaScript, if you can. You're missing out!</div>
+            <script>loadTemplatePart('../includes/nav.html', 'nav', menuControl);</script>
+        </nav>
+            
+        <main>
+            
+            <h1 class="page-title">Metrics</h1>
+            <p class="type-intro">A component that displays a number and a brief caption</p>
+            
+            <ul id="localnav">
+                <li><a href="#usage">Usage</a></li>
+            </ul>
+            
+            <section id="usage">
+                <h2>Usage</h2>
+                <p>Metrics are implemented with the class <code class="class">cl-metric</code></p>
+                
+                <xmp class="prettyprint">
+<div class="cl-metric">
+    <span>number</span>
+    <span>caption</span>
+</div>
+                </xmp>
+                <div class="cl-metric">
+                    <span class="type-numeric">55%</span>
+                    <span>Rhode Island residents</span>
+                </div>
+                    
+                <article>
+                    <p>By default, metrics have a light grey background.  To display the metric using a dark background, add the class <code class="class second">dark</code>.</p>
+                    
+                    <p>To display the metric without a background, for use in cases where the page or parent element background should show through, use the class <code class="class second">clear</code>.</p>
+                    
+                    <p>To display a clear metric in cases where the page or parent background is dark, use the <code class="class second">dark</code> and <code class="class second">clear</code> classes together.</p>
+                
+                    <div class="cl-tiles thirds">
+
+                        <div>
+                            <xmp class="prettyprint">
+<div class="cl-metric dark">
+    <span>number</span>
+    <span>caption</span>
+</div>
+                            </xmp>
+                            <div class="cl-metric dark">
+                                <span class="type-numeric">78%</span>
+                                <span>classes with less than 30 students</span>
+                            </div>
+
+                        </div>
+                        <div>
+                            <xmp class="prettyprint">
+<div class="cl-metric clear">
+    <span>number</span>
+    <span>caption</span>
+</div>
+                            </xmp>
+                            <div class="cl-metric clear">
+                                <span class="type-numeric">3,298</span>
+                                <span>first-year students</span>
+                            </div>
+
+                        </div>
+                        <div>
+                            <xmp class="prettyprint">
+<div class="cl-metric dark clear">
+    <span>number</span>
+    <span>caption</span>
+</div>
+                            </xmp>
+                            <div class="client-metric-dark-clear">
+                                <div class="cl-metric dark clear">
+                                    <span class="type-numeric">17:1</span>
+                                    <span>student to faculty ratio</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                
+                </article>
+                
+                <article>
+                    <h4>Shortcode Support</h4>
+                    <p>Metrics can be implemented with the shortcode <code class='shortcode'>cl-metric</code></p>
+                    <p class="code shortcode">[cl-metric metric="78%" caption="classes with less than 30 students"]</p>
+                    <div class="attributes">
+                        <h5>Attributes</h5>
+                        <ul>
+                            <li>
+                                <p><span class="name">metric</span> (string) (required)</p>
+                                <div>
+                                    <p>The text for the metric</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">caption</span> (string) (required)</p>
+                                <div>
+                                    <p>The text for the caption</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">style</span> (string) (optional) (values: <code class="str">dark</code>, <code class="str">clear</code>, <code class="str">overlay</code>)</p>
+                                <div>
+                                    <p>Set the style of the metric</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">class</span> (string) (optional)</p>
+                                <div>
+                                    <p>Set custom CSS class(es)</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                
+            </section>
+            
+        </main>
+                
+        <footer id="globalfooter">
+            <script>loadTemplatePart('../includes/footer.html', 'footer');</script>
+        </footer>
+        
+    </body>
+    
+</html>
