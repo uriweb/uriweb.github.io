@@ -8,7 +8,7 @@ John Pennypacker, Manager, Web Communications
 Sarah Couch, Senior Digital Content Strategist  
 Brandon J. C. Fuller, Digital Content Strategist  
 Mary Elizabeth Reilly-McGreen, Digital Content Strategist  
-Laurel McLaughlin, Digital Content Strategist
+Laurel McLaughlin, Digital Content Strategist  
 Nicki Toler, Web Editor 
 
     
