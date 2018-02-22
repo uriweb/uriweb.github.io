@@ -22,10 +22,10 @@ gulp.task('styles', styles);
 
 function styles(done) {
         
-	gulp.src('./css/**/*.scss')
+	gulp.src('./src/sass/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass(sassOptions).on('error', sass.logError))
-		.pipe(concat('playground.built.css'))
+		.pipe(concat('styleguide.built.css'))
         .pipe(postcss([ autoprefixer() ]))
 		.pipe(sourcemaps.write('./map'))
 		.pipe(gulp.dest('./css/'));
@@ -39,11 +39,11 @@ function styles(done) {
 gulp.task('scripts', scripts);
 
 function scripts(done) {
-  gulp.src('./js/src/*.js')
+  gulp.src('./src/js/**/*.js')
     .pipe(jshint(done))
     .pipe(jshint.reporter('default'));
-  gulp.src('./js/src/*.js')
-    .pipe(concat('playground.built.js'))
+  gulp.src('./src/js/**/*.js')
+    .pipe(concat('styleguide.built.js'))
     //.pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
@@ -59,10 +59,10 @@ gulp.task('watcher', watcher);
 function watcher(done) {
 	
     // watch for Playground CSS changes
-	gulp.watch('./css/**/*.scss', styles);
+	gulp.watch('./src/sass/**/*.scss', styles);
     
     // watch for Playground JS changes
-	gulp.watch('./js/src/*.js', scripts);
+	gulp.watch('./src/js/**/*.js', scripts);
 
 	done();
 }
