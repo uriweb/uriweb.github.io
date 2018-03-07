@@ -54,16 +54,19 @@
     <span>caption</span>
 </div>
                 </xmp>
-                <div class="cl-metric">
-                    <span class="type-numeric">55%</span>
-                    <span>Rhode Island residents</span>
+                
+                <div class="cl-tiles fourths">
+                    <div>
+                        <div class="cl-metric">
+                            <span class="type-numeric">55%</span>
+                            <span>Rhode Island residents</span>
+                        </div>
+                    </div>
                 </div>
-                    
+                
                 <article>
                     <p>By default, metrics have a light grey background.  To display the metric using a dark background, add the class <code class="class second">dark</code>.</p>
-                    
                     <p>To display the metric without a background, for use in cases where the page or parent element background should show through, use the class <code class="class second">clear</code>.</p>
-                    
                     <p>To display a clear metric in cases where the page or parent background is dark, use the <code class="class second">dark</code> and <code class="class second">clear</code> classes together.</p>
                 
                     <div class="cl-tiles thirds">
@@ -115,6 +118,37 @@
                 </article>
                 
                 <article>
+                    
+                    <h4>Metrics can be floated</h4>
+                    <p>Metrics assume the width of their parent by default.</p>
+                    <p>To float the metric, add the class <code class="class">left</code> or <code class="class">right</code>.  When floated, a metric's width adapts to fit its contents.</p>
+                    <xmp class="prettyprint">
+<div class="cl-metric left">
+    ...
+</div>    
+                    </xmp>
+
+                    <div class="cl-metric left">
+                        <span class="type-numeric">100%</span>
+                        <span>to the left</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at maximus justo. Aliquam vulputate arcu non cursus semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer rhoncus scelerisque eros ac varius. Quisque purus purus, faucibus at turpis in, auctor tristique ex. Aliquam at odio non felis accumsan porttitor. Morbi purus ante, blandit et lorem vitae, vulputate dictum velit. Aliquam erat volutpat. Proin maximus, nibh eu placerat elementum, augue elit elementum dolor, et porta leo sapien at ipsum. Duis tristique dolor eu tortor varius, vitae feugiat lacus tincidunt.</p>
+
+                    <xmp class="prettyprint">
+<div class="cl-metric right">
+    ...
+</div>    
+                    </xmp>
+                
+                    <div class="cl-metric right">
+                        <span class="type-numeric">100%</span>
+                        <span>to the right</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at maximus justo. Aliquam vulputate arcu non cursus semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer rhoncus scelerisque eros ac varius. Quisque purus purus, faucibus at turpis in, auctor tristique ex. Aliquam at odio non felis accumsan porttitor. Morbi purus ante, blandit et lorem vitae, vulputate dictum velit. Aliquam erat volutpat. Proin maximus, nibh eu placerat elementum, augue elit elementum dolor, et porta leo sapien at ipsum. Duis tristique dolor eu tortor varius, vitae feugiat lacus tincidunt.</p>
+
+                </article>
+                
+                <article>
                     <h4>Shortcode Support</h4>
                     <p>Metrics can be implemented with the shortcode <code class='shortcode'>cl-metric</code></p>
                     <p class="code shortcode">[cl-metric metric="78%" caption="classes with less than 30 students"]</p>
@@ -137,6 +171,13 @@
                                 <p><span class="name">style</span> (string) (optional) (values: <code class="str">dark</code>, <code class="str">clear</code>, <code class="str">overlay</code>)</p>
                                 <div>
                                     <p>Set the style of the metric</p>
+                                    <p class="default">(default value: none)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <p><span class="name">float</span> (string) (optional) (values: <code class="string">'left'</code>, <code class="string">'right'</code>)</p>
+                                <div>
+                                    <p>Set to float the metric either left or right</p>
                                     <p class="default">(default value: none)</p>
                                 </div>
                             </li>
