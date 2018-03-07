@@ -126,7 +126,7 @@ section {
 
 p {
     line-height: 1.7;
-    padding-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 *[class^="cl-"] p:first-of-type {
@@ -180,8 +180,8 @@ xmp {
     white-space: pre-wrap;
     font-family: $type-mono;
     font-size: .85rem;
-    margin: 30px 0;
-    padding: 0 1.2rem .5rem;
+    margin: 0 0 2rem;
+    padding: 0 1.2rem;
 }
 
 xmp,
@@ -215,7 +215,7 @@ p.code {
 p.code.shortcode {
     color: #d02566;
     margin: .8rem 0;
-    padding: 1rem 1.2rem 1.5rem;
+    padding: 1rem 1.2rem;
 }
 p.code.shortcode span.enclosing {
     color: #74002b;
