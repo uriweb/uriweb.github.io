@@ -99,7 +99,9 @@
                 </article>
                 <article>
                     <p>Add sections to the component with the shortcode <code class='shortcode'>cl-tab</code></p>
-                    <p class="code shortcode">[cl-tab title="A Great Tab" body="Tabs are great - when they're accessible!"]</p>
+                    <p class="code shortcode">[cl-tab title="A Great Tab"]Tabs are great - when they're accessible![/cl-tab]</p>
+                    <p>The tab shortcode supports nested shortcodes, which makes adding other components easy.</p>
+                    <p class="code shortcode">[cl-tab title="An Excellent Tab"]Tabs are excellent.  Here's a button! [cl-button ...][/cl-tab]</p>
                     <div class="attributes">
                         <h5>Attributes</h5>
                         <ul>
@@ -107,13 +109,6 @@
                                 <p><span class="name">title</span> (string) (optional)</p>
                                 <div>
                                     <p>The text for the tab and section title</p>
-                                    <p class="default">(default value: none)</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p><span class="name">body</span> (string) (optional)</p>
-                                <div>
-                                    <p>The text for the section body</p>
                                     <p class="default">(default value: none)</p>
                                 </div>
                             </li>
@@ -132,11 +127,20 @@
                                 </div>
                             </li>
                         </ul>
+                        <div class="deprecated">
+                            <h5>Removed</h5>
+                            <ul>
+                                <li>
+                                    <p><span class="name">body</span> (bool) (optional)</p>
+                                    <p><a href="https://github.com/uriweb/uri-component-library/releases/tag/2.3.0" class="code version">2.3.0</a>Use an enclosing shortcode instead</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
                 <article>
                     <p>Nest the <code class='shortcode'>cl-tab</code> shortcode(s) inside the <code class='shortcode'>cl-tabs</code> shortcode.</p>
-                    <p class="code shortcode"><span class="enclosing">[cl-tabs]</span>[cl-tab title="Tab 1" body="Tab 1 content"][cl-tab title="Tab 2" body="Tab 2 content"]...<span class="enclosing">[/cl-tabs]</span></p>
+                    <p class="code shortcode"><span class="enclosing">[cl-tabs]</span>[cl-tab title="Tab 1"]Tab 1 content.[/cl-tab][cl-tab title="Tab 2"]Tab 2 content.[/cl-tab]...<span class="enclosing">[/cl-tabs]</span></p>
                 </article>
                 
             </section>
