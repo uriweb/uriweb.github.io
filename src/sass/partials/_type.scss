@@ -280,14 +280,23 @@ code, a.code {
     } 
     &.attr {
         color: #8f00d0;
-        white-space: pre-wrap;
+        white-space: pre-wrap;       
     }
     &.link {
         color: #555;
         white-space: pre-wrap;
     }
     &.tag {
+        
         color: #005cc5;
+        
+        code.class {
+            padding: 0;
+            top: 0;
+            background: transparent;
+            color: #1aa166;
+        }
+        
     }
 } // code
 
