@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Heros - Components - Digital Content Style Guide</title>
+        <title>Heroes - Components - Digital Content Style Guide</title>
         <link rel="mask-icon" href="../media/assets/safari-pinned-tab.svg" color="#333333">
         <link rel="icon" type="image/png" href="../media/assets/favicon.png">
         <link rel="apple-touch-icon" href="../media/assets/apple-touch-icon.png">
@@ -17,7 +17,7 @@
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     </head>
 	
-	<body class="nav-components nav-heros">
+	<body class="nav-components nav-heroes">
         
         <nav>
             <div id="no-js">Please turn on JavaScript, if you can. You're missing out!</div>
@@ -26,9 +26,9 @@
             
         <main>
             
-            <h1 class="page-title">Heros</h1>
-            <img class="wireframe right" src="../media/wireframes/heros.svg" alt="Heros">
-            <p class="type-intro">Heros are large, full-width components used to display visually engaging content, typically at the top of the page, and are often accompanied by header language and occasionally a button.  Heros can be either a video or a still image, and are used to add visual intensity to a page with the goal of driving the user to action.</p>
+            <h1 class="page-title">Heroes</h1>
+            <img class="wireframe right" src="../media/wireframes/heroes.svg" alt="Heroes">
+            <p class="type-intro">Heroes are large, full-width components used to display visually engaging content, typically at the top of the page, and are often accompanied by header language and occasionally a button.  Heroes can be either a video or a still image, and are used to add visual intensity to a page with the goal of driving the user to action.</p>
             
             <ul id="localnav">
                 <li><a href="#video">Video Hero</a></li>
@@ -39,8 +39,8 @@
             <section id="video">
                 
                 <h2>Video Hero</h2>
-                <p>Video heros are implemented with the class <code class="class">cl-hero</code></p>
-                <p>Video heros require an overlay and poster image. Create an overlay with the class <code class="class">overlay</code>, and a poster with the class <code class="class">poster</code>.</p>
+                <p>Video heroes are implemented with the class <code class="class">cl-hero</code></p>
+                <p>Video heroes require an overlay and poster image. Create an overlay with the class <code class="class">overlay</code>, and a poster with the class <code class="class">poster</code>.</p>
                 <p>The poster <b>must also</b> have an <code class="attr">id</code> attribute.  It can be arbitrary, but it is necessary for YouTube's API to function.</p>
                 <p>The poster's <code class="attr">data-id</code> attribute is used to determine which YouTube video to load, based on the video id.  For example, if the YouTube URL is <code class="link">https://www.youtube.com/watch?v=ydD1Wg2B8Vk</code>, create the poster with a <code class="attr">data-id</code> of <code class="id">ydD1Wg2B8Vk</code>.</p>
                 <xmp class="prettyprint">
@@ -88,7 +88,7 @@
             <section id="image">
                 
                 <h2>Image Hero</h2>
-                <p>Image heros are implemented with the class <code class="class">cl-hero</code></p>
+                <p>Image heroes are implemented with the class <code class="class">cl-hero</code></p>
                 <xmp class="prettyprint">
 <div class="cl-hero">
     <div class="still" style="background-image:url(hero.jpg)"></div>
@@ -101,7 +101,7 @@
                 <article>
                     <h4>Add overlay content.</h4>
                     <p>To overlay content, such as a headline, subheading, and button, create a content block before the image using the class <code class="class">block</code>.  The content will appear superimposed on the image.</p>
-                    <p>Note that an overlay <code class="tag">div</code> is not needed for image heros.</p>
+                    <p>Note that an overlay <code class="tag">div</code> is not needed for image heroes.</p>
                     <xmp class="prettyprint">
 <div class="cl-hero">
     <div class="block">
@@ -123,8 +123,8 @@
                 </article>
                 
                 <article>
-                    <h4>Image heros can be animated.</h4>
-                    <p>Heros are designed so that the image is initially centered and always covers the entire hero element. Because of this, the direction and distance of any motion applied is dependent on the dimensions of the image and the hero.</p>
+                    <h4>Image heroes can be animated.</h4>
+                    <p>Heroes are designed so that the image is initially centered and always covers the entire hero element. Because of this, the direction and distance of any motion applied is dependent on the dimensions of the image and the hero.</p>
                     <p>To add movement to the hero image on page load, first add the class <code class="class">animate</code> to the image.  Then choose an animation method.</p>
                     <h4>The "shift" method</h4>
                     <p>To use the shift animation, add the class <code class="class second">shift</code>. When the page is loaded, the image will shift position slightly.</p>
@@ -154,7 +154,7 @@
             <section id="options">
                 
                 <h2>Options</h2>
-                <h4>Heros can be full width.</h4>
+                <h4>Heroes can be full width.</h4>
                 <p>To make a video or image hero span the width of the browser window, add the class <code class="class">fullwidth</code></p>
                 <xmp class="prettyprint">
 <div class="cl-hero fullwidth">
@@ -211,7 +211,7 @@
                 
                 <article>
                     <h4>Shortcode Support</h4>
-                    <p>Heros can be implemented with the shortcode <code class='shortcode'>cl-hero</code></p>
+                    <p>Heroes can be implemented with the shortcode <code class='shortcode'>cl-hero</code></p>
                     <p class="code shortcode">[cl-hero headline="A Great Hero" id="hero1" vid="aK9iLeL5l_c" img="sampleimage.jpg"]</p>
                     
                     <div class="attributes">
@@ -315,9 +315,9 @@
                 
                 <article class="wysiwyg">
                     <h4>WYSIWYG Editor Support</h4>
-                    <p>With the <a href="../plugin/" class="component">WYSIWYG</a> plugin installed, heros can be added using the WYSIWYG editor.</p>
+                    <p>With the <a href="../plugin/" class="component">WYSIWYG</a> plugin installed, heroes can be added using the WYSIWYG editor.</p>
                     <p>The icon <img src="../media/wysiwyg/icons/hero.png" class="icon" alt="Hero WYSIWYG toolbar icon"> to add a hero appears in the WYSIWYG toolbar.  Clicking this icon opens a dialogue where different hero attributes can be easily set.</p>
-                    <p>Currently, superheros and full width heros cannot be built through the WYSIWIG editor.</p>
+                    <p>Currently, superheroes and full width heroes cannot be built through the WYSIWIG editor.</p>
                     <img src="../media/wysiwyg/hero.png" class="editor" alt="Hero WYSIWYG editor dialogue">
                     <p>The completed hero will appear fully styled in the editor window.  To edit it, simply double-click the hero to reopen the editor dialogue.</p>
                 </article>
