@@ -1,6 +1,8 @@
 # README #
 
-This is the University of Rhode Island’s style guide for all things digital. The style guide website is served from this repository. View it at [http://uriweb.github.io/](http://uriweb.github.io/)
+This is the University of Rhode Island’s style guide for all things digital.
+
+**As of June 13, 2018, the styleguide has been moved to [www.uri.edu/styleguide](https://www.uri.edu/styleguide) and is no longer served from this repository.** 
 
 ### Humans ###
 
